@@ -912,6 +912,20 @@ class Criteria implements IteratorAggregate {
 		$this->orderByColumns[] = $name . ' ' . self::DESC;
 		return $this;
 	}
+	
+	/**
+	 * Add order by field
+	 *
+	 * @param       $field
+	 * @param array $order
+	 *
+	 * @return $this
+	 */
+	public function addOrderByField($field, $order = array())
+	{
+		$this->orderByColumns[] = 'FIELD (' . $field . ',' . implode(',', $order) . ')';
+		return $this;
+	}
 
 	/**
 	 * Get order by columns.
