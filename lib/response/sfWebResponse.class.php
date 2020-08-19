@@ -183,9 +183,9 @@ class sfWebResponse extends sfResponse
       'name'     => $name,
       'value'    => $value,
       'expire'   => $expire,
-      'path'     => $path,
+      'path'     => $path . '; samesite=None',
       'domain'   => $domain,
-      'secure'   => $secure ? true : false,
+      'secure'   => true,
       'httpOnly' => $httpOnly,
     );
   }

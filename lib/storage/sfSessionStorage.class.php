@@ -77,9 +77,9 @@ class sfSessionStorage extends sfStorage
     }
 
     $lifetime = $this->options['session_cookie_lifetime'];
-    $path     = $this->options['session_cookie_path'];
+    $path     = $this->options['session_cookie_path'] . '; samesite=None';
     $domain   = $this->options['session_cookie_domain'];
-    $secure   = $this->options['session_cookie_secure'];
+    $secure   = true;
     $httpOnly = $this->options['session_cookie_httponly'];
     session_set_cookie_params($lifetime, $path, $domain, $secure, $httpOnly);
 

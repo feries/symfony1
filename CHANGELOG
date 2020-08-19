@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+19/08/20: Versions 1.5.2
+-------------------------
+ * Set for all cookies SameSite=None and Secure
+
 24/10/16: Versions 1.5.1
 -------------------------
  * Compatibily for php 5.6
